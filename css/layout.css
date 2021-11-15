@@ -26,13 +26,15 @@ img { vertical-align: top; }
 
 #header .container #gnb .list > li { position: relative; }
 
-#header .container #gnb .list > li:hover .depth02 { pointer-events: auto; opacity: 1; visibility: visible; -webkit-transform: translateY(0); transform: translateY(0); }
+#header .container #gnb .list > li:hover .depth02 { pointer-events: auto; opacity: 1; visibility: visible; -webkit-transform: translateY(10px); transform: translateY(10px); }
 
-#header .container #gnb .list > li:hover > a { background-color: #bf0c14; }
+#header .container #gnb .list > li:hover > a::after { content: ""; display: block; height: 10px; width: 100%; position: absolute; bottom: -10px; left: 0; }
 
-#header .container #gnb .list > li > a { font-size: 1.8rem; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; }
+#header .container #gnb .list > li > a { font-size: 1.8rem; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; position: relative; }
 
-#header .container #gnb .list > li .depth02 { opacity: 0; visibility: hidden; position: absolute; width: 100%; padding: 20px 10px; pointer-events: none; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0 0 15px 15px; -webkit-transform: translateY(50px); transform: translateY(50px); -webkit-transition: all 0.25s ease; transition: all 0.25s ease; background-color: #bf0c14; }
+#header .container #gnb .list > li .depth02 { opacity: 0; visibility: hidden; position: absolute; width: 100%; padding: 20px 10px; pointer-events: none; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 15px; -webkit-transform: translateY(50px); transform: translateY(50px); -webkit-transition: all 0.25s ease; transition: all 0.25s ease; background-color: #bf0c14; }
+
+#header .container #gnb .list > li .depth02::before { content: ""; display: block; border: 10px solid #bf0c14; border-color: transparent; border-bottom-color: #bf0c14; width: 0; height: 0; position: absolute; left: calc(50% - 10px); top: -20px; }
 
 #header .container #gnb .list > li .depth02 li a { display: block; padding: 10px 0; }
 

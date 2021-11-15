@@ -111,3 +111,73 @@
         }
     }
 }
+
+.tabMenu {
+    ul {
+        display: flex;
+        justify-content: center;
+        li {
+            width: 200px;
+            height: 60px;
+            display: flex;
+            border: 1px solid $border-color;
+            @include flexCenter();
+            overflow: hidden;
+            border-left: none;
+            &:first-child {
+                border-left: 1px solid $border-color;
+            }
+            &.on {
+                background-color: $main-color;
+                border-color: $main-color;
+                color: $white-color;
+                @include longShadow(darken($main-color, 10), right, 30);
+            }
+        }
+    }
+}
+.history {
+    .historyList {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: flex-end;
+        padding: 100px 0;
+        > li {
+            width: 50%;
+            box-sizing: border-box;
+            .year {
+                font-size: $x-large-size;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+            ul {
+                li {
+                    display: flex;
+                    margin: 15px 0;
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+            &:nth-child(2n + 1) {
+                // align-self: flex-end;
+                margin-left: auto;
+                padding-left: 50px;
+            }
+            &:nth-child(2n) {
+                padding-right: 50px;
+                .year {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                ul {
+                    li {
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+    }
+}

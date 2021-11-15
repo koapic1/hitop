@@ -131,7 +131,7 @@
                 background-color: $main-color;
                 border-color: $main-color;
                 color: $white-color;
-                @include longShadow(darken($main-color, 10), right, 30);
+                @include longShadow(darken($main-color, 10), right, 40);
             }
         }
     }
@@ -142,10 +142,35 @@
         flex-direction: column;
         // justify-content: center;
         // align-items: flex-end;
-        padding: 100px 0;
+        margin: 100px 0;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            top: 0px;
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            background-color: $border-color;
+            margin-left: -1px;
+        }
         > li {
             width: 50%;
             box-sizing: border-box;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                width: 24px;
+                height: 24px;
+                border: 5px solid $main-color;
+                border-radius: 50%;
+                background-color: $white-color;
+                position: absolute;
+                top: 10px;
+                box-sizing: border-box;
+            }
             .year {
                 font-size: $x-large-size;
                 font-weight: 700;
@@ -164,9 +189,24 @@
                 // align-self: flex-end;
                 margin-left: auto;
                 padding-left: 50px;
+                &::before {
+                    left: 0;
+                    transform: translateX(-50%);
+                }
+                ul {
+                    li {
+                        strong {
+                            margin-right: 20px;
+                        }
+                    }
+                }
             }
             &:nth-child(2n) {
                 padding-right: 50px;
+                &::before {
+                    right: 0;
+                    transform: translateX(50%);
+                }
                 .year {
                     display: flex;
                     justify-content: flex-end;
@@ -175,9 +215,44 @@
                     li {
                         display: flex;
                         flex-direction: row-reverse;
+                        strong {
+                            margin-left: 20px;
+                        }
                     }
                 }
             }
         }
+    }
+}
+// history end
+#map {
+    height: 600px;
+    margin-top: 100px;
+}
+.customOverlay {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    a {
+        padding: 10px 20px;
+        background-color: $main-color;
+        overflow: hidden;
+        @include longShadow(darken($main-color, 10), right, 30);
+        border-radius: 5px;
+        color: $white-color;
+        display: block;
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: darken($main-color, 10);
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

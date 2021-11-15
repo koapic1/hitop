@@ -1,0 +1,43 @@
+// board.css: 회원가입, 공지사항, form 관련 css 등을 적음
+@import "vars";
+@import "mixins";
+
+.board {
+    width: 100%;
+    border-top: 1px solid $main-color;
+    tr {
+        border-bottom: 1px solid $border-color;
+        th,
+        td {
+            padding: 15px 0;
+            text-align: center;
+        }
+        .subjact {
+            text-align: left;
+        }
+    }
+}
+.pagination {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    ul {
+        display: flex;
+        margin: 0 20px;
+        .active {
+            a {
+                background-color: $main-color;
+                border-color: $main-color;
+                color: $white-color;
+                overflow: hidden;
+                @include longShadow(darken($main-color, 10), right, 30);
+            }
+        }
+    }
+    a {
+        width: 30px;
+        height: 30px;
+        @include flexCenter();
+        border: 1px solid $border-color;
+    }
+}

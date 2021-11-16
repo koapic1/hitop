@@ -41,3 +41,65 @@
         border: 1px solid $border-color;
     }
 }
+.searchBox {
+    padding: 50px 0;
+    margin-top: 50px;
+    background: $light-grey;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    input[type="text"] {
+        height: 40px;
+        padding: 15px 0;
+        min-width: 400px;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        border: 1px solid $border-color;
+        box-sizing: border-box;
+    }
+    select {
+        height: 40px;
+        min-width: 150px;
+    }
+    button {
+        height: 40px;
+        background-color: $text-color;
+        color: $white-color;
+        padding: 0 20px;
+        vertical-align: top;
+    }
+}
+.btns {
+    display: flex;
+    margin-top: 50px;
+    &.right {
+        justify-content: flex-end;
+    }
+    &.center {
+        justify-content: center;
+    }
+    .btn {
+        display: block;
+        height: 50px;
+        padding: 0 40px;
+        border-radius: 5px;
+        color: $white-color;
+        overflow: hidden;
+        margin: 0 5px;
+        @include flexCenter;
+        &.nomal {
+            background-color: $text-color;
+            @include longShadow(darken($text-color, 10), right, 40);
+        }
+        &.confirm {
+            background-color: $main-color;
+            @include longShadow(darken($main-color, 10), right, 40);
+        }
+        &.cancle {
+            background-color: $grey-color;
+            @include longShadow(darken($grey-color, 10), right, 40);
+        }
+    }
+}

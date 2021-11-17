@@ -1,4 +1,4 @@
-<? include("../include/header.html"); ?>
+<?php include("../include/header.html"); ?>
 <main id="subContentsWrap">
     <div id="subVisual" class="subVisual04">
         <div class="subTitle">
@@ -40,91 +40,86 @@
     </div>
     <!-- subVisual end -->
     <div id="subContents">
-        <h3 class="subTitle">견적문의</h3>
+        <h3 class="subTitle">공지사항</h3>
         <div class="contents">
             <table class="board">
                 <colgroup>
                     <col style="width: 100px" />
                     <col />
                     <col style="width: 150px" />
-                    <col style="width: 150px" />
+                    <col style="width: 80px" />
                 </colgroup>
                 <thead>
                     <tr>
                         <th scope="col">번호</th>
                         <th scope="col">제목</th>
-                        <th scope="col">작성자</th>
                         <th scope="col">날짜</th>
+                        <th scope="col">조회수</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td class="subjact"><a href="">견적 문의</a></td>
-                        <td>아무개</td>
+                        <td class="subjact"><a href="">추석 휴무 공지</a></td>
                         <td>2021-09-10</td>
+                        <td>100</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="btns right">
-                <a href="inqury_write.html" class="btn confirm">글쓰기</a>
-                <!-- <a href="" class="btn cancle">취소</a>
-                        <a href="" class="btn nomal">목록</a> -->
-            </div>
             <div class="pagination">
                 <a href="" class="prev"><span class="material-icons">chevron_left</span></a>
                 <ul>
@@ -155,4 +150,4 @@
         </div>
     </div>
 </main>
-<? include("../include/footer.html"); ?>
+<?php include("../include/footer.html"); ?>

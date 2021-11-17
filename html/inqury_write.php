@@ -1,4 +1,4 @@
-<? include("../include/header.html"); ?>
+<?php include("../include/header.html"); ?>
 <main id="subContentsWrap">
     <div id="subVisual" class="subVisual04">
         <div class="subTitle">
@@ -120,4 +120,4 @@
         </div>
     </div>
 </main>
-<? include("../include/footer.html"); ?>
+<?php include("../include/footer.html"); ?>

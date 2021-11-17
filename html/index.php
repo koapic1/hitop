@@ -1,4 +1,4 @@
-<? include("../include/header.html"); ?>
+<?php include("../include/header.html"); ?>
 <main id="main">
     <div class="container">
         <div id="mainVisual">
@@ -180,4 +180,4 @@
     </div>
 </main>
 <!-- main end -->
-<? include("../include/footer.html"); ?>
+<?php include("../include/footer.html"); ?>

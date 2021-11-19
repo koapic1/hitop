@@ -30,9 +30,9 @@
                         <span class="material-icons"> expand_more </span>
                     </button>
                     <ul>
-                        <li><a href="">공지사항</a></li>
+                        <li><a href="notice.php">공지사항</a></li>
                         <li><a href="">나라장터 등록물품</a></li>
-                        <li><a href="">견적문의</a></li>
+                        <li><a href="inqury.php">견적문의</a></li>
                     </ul>
                 </div>
             </div>

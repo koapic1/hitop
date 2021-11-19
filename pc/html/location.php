@@ -34,7 +34,7 @@
                         <li><a href="">사업개요</a></li>
                         <li><a href="">인사말</a></li>
                         <li><a href="">경영이념</a></li>
-                        <li><a href="">회사연혁</a></li>
+                        <li><a href="history.php">회사연혁</a></li>
                         <li><a href="">CI소개</a></li>
                         <li><a href="">조직도</a></li>
                         <li><a href="">오시는길</a></li>

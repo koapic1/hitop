@@ -44,7 +44,7 @@
                             <div class="txtBox">
                                 <p>하이탑이 꿈꾸는 세상</p>
                                 <h3>
-                                    cataㅣog <br />
+                                    catalog <br />
                                     download
                                 </h3>
                             </div>

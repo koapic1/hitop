@@ -37,7 +37,7 @@
                         <li><a href="">회사연혁</a></li>
                         <li><a href="">CI소개</a></li>
                         <li><a href="">조직도</a></li>
-                        <li><a href="">오시는길</a></li>
+                        <li><a href="location.php">오시는길</a></li>
                     </ul>
                 </div>
             </div>

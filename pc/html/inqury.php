@@ -121,7 +121,7 @@
                 </tbody>
             </table>
             <div class="btns right">
-                <a href="inqury_write.html" class="btn confirm">글쓰기</a>
+                <a href="inqury_write.php" class="btn confirm">글쓰기</a>
                 <!-- <a href="" class="btn cancle">취소</a>
                         <a href="" class="btn nomal">목록</a> -->
             </div>

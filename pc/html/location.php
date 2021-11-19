@@ -63,5 +63,5 @@
         </div>
     </div>
 </main>
-<script src="../js/map.js" defer></script>
+<script src="../js/map.js"></script>
 <?php include("../include/footer.html"); ?>

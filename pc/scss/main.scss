@@ -1,0 +1,280 @@
+@import "vars";
+@import "mixins";
+//tag < class < id < style < !important 우선순위
+.contentsBox {
+    padding: 100px 0;
+}
+.titleBox {
+    margin-bottom: 100px;
+    text-align: center;
+    h2 {
+        font-size: $h2;
+        margin-bottom: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+#main {
+    #mainVisual {
+        overflow: hidden;
+        position: relative;
+        ul {
+            li {
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50%;
+                &.visual01 {
+                    background-image: url(../images/main/mainVisual01.jpg);
+                }
+                &.visual02 {
+                    background-image: url(../images/main/mainVisual02.jpg);
+                }
+                &.visual03 {
+                    background-image: url(../images/main/mainVisual03.jpg);
+                }
+            }
+        }
+        .slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            text-align: center;
+            color: $white-color;
+            .main {
+                font-size: 5.4rem;
+                font-weight: 600;
+                margin-bottom: 50px;
+                text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+            }
+            .sub {
+                font-size: 1.8rem;
+                line-height: 1.5;
+            }
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            color: $white-color;
+            cursor: pointer;
+            &.prev {
+                left: 0;
+            }
+            &.next {
+                right: 0;
+            }
+        }
+        .iconScroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            bottom: 100px;
+            z-index: 2;
+            .icon {
+                display: flex;
+                width: 20px;
+                height: 40px;
+                border: 2px solid $white-color;
+                border-radius: 100px;
+                margin-bottom: 10px;
+                justify-content: center;
+                &::before {
+                    @include pseudo(block, relative);
+                    width: 3px;
+                    height: 8px;
+                    background-color: $white-color;
+                    margin-top: 10px;
+                    border-radius: 100px;
+                    animation: iconAni 0.5s ease infinite alternate;
+                    // animation: name duration timing-function delay iteration-count direction fill-mode;
+                }
+            }
+            .txt {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 1.2rem;
+                color: $white-color;
+            }
+        }
+    }
+    // mainVisual end
+    #quickMenu {
+        padding-top: 0;
+        .list {
+            display: flex;
+            justify-content: center;
+            li {
+                width: 400px;
+                position: relative;
+                overflow: hidden;
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        z-index: 2;
+                    }
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+                &::before {
+                    @include pseudo();
+                    border: 1px solid $white-color;
+                    left: 20px;
+                    right: 20px;
+                    top: 20px;
+                    bottom: 20px;
+                    opacity: 0;
+                    transition: 0.25s;
+                }
+                img {
+                    transition: 0.25s;
+                }
+                .txtBox {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 40px;
+                    color: $white-color;
+                }
+                h3 {
+                    font-size: $h2;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    // quickMenu end
+    #business {
+        background: url(../images/main/bgBusiness.jpg) no-repeat 50%;
+        background-size: cover;
+        .listBox {
+            width: 1200px;
+            margin: auto;
+            .list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li {
+                    width: 590px;
+                    position: relative;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                    &:hover img {
+                        transform: scale(1.1);
+                        filter: grayscale(1);
+                    }
+                    img {
+                        transition: 0.25s;
+                    }
+                    .txtBox {
+                        position: absolute;
+                        left: 40px;
+                        bottom: 40px;
+                        color: $white-color;
+                        h3 {
+                            font-size: $h3;
+                            margin-bottom: 10px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // business end
+    #news {
+        .listBox {
+            width: 1200px;
+            margin: auto;
+            .list {
+                display: flex;
+                justify-content: space-between;
+                li {
+                    width: 390px;
+                    border: 2px solid $border-color;
+                    transition: 0.25s;
+                    &:hover {
+                        border-color: $main-color;
+                        transform: translateY(-20px);
+                        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+                    }
+                    img {
+                        width: 100%;
+                        height: 350px;
+                        object-fit: cover;
+                    }
+                    .txtBox {
+                        padding: 20px;
+                        h3 {
+                            font-size: $h3;
+                            margin-bottom: 20px;
+                            white-space: nowrap; //긴 문장을 한 줄로 강제정렬
+                            overflow: hidden; //줄 넘어간 문장을 가림
+                            text-overflow: ellipsis; //가린 문장 뒤에 ...붙여줌
+                        }
+                        .txt {
+                            margin-bottom: 20px;
+                            @include multiEllipsis(1.5, 3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // news end
+    #customer {
+        background: url(../images/main/bgCustomer.jpg) no-repeat 50%;
+        background-size: cover;
+        color: $white-color;
+        .titleBox {
+            h2 {
+                &::after {
+                    @include pseudo(block, relative);
+                    @include box(30px, 2px);
+                    margin: 30px auto;
+                    background-color: $white-color;
+                }
+            }
+            p {
+                line-height: 1.5;
+            }
+        }
+        .btns {
+            display: flex;
+            justify-content: center;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include box(200px, 50px);
+                color: $white-color;
+                background-color: $main-color;
+                border-radius: 100px;
+                @include longShadow(darken($main-color, 10), right, 50);
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@keyframes iconAni {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}

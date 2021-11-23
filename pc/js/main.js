@@ -9,8 +9,15 @@ const mainVisualSlider = new Swiper("#mainVisual", {
     },
 });
 
-const gnbItem = document.querySelector("#gnb .list > li");
+const gnbItem = document.querySelectorAll("#gnb .list > li");
+//.querySelectorAll(찾는 것) : 배열처럼 생긴 nodeList를 리턴한다.
 const header = document.querySelector("#header");
-gnbItem.addEventListener("mouseenter", function () {
-    header.classList.add("open");
-});
+console.log(gnbItem.length);
+for (i = 0; i < gnbItem.length; i++) {
+    gnbItem[i].addEventListener("mouseenter", function () {
+        header.classList.add("open");
+    });
+    gnbItem[i].addEventListener("mouseleave", function () {
+        header.classList.remove("open");
+    });
+}

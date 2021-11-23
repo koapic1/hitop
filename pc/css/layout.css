@@ -28,9 +28,11 @@ img { vertical-align: top; }
 
 #header .container #gnb .list > li:hover > a { background-color: #bf0c14; }
 
+#header .container #gnb .list > li:hover .depth02 { background-color: #bf0c14; }
+
 #header .container #gnb .list > li > a { font-size: 1.8rem; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; }
 
-#header .container #gnb .list > li .depth02 { padding: 20px 10px; display: block; }
+#header .container #gnb .list > li .depth02 { padding: 20px 10px; display: block; height: 400px; }
 
 #header .container #gnb .list > li .depth02 li a { display: block; padding: 10px 0; }
 

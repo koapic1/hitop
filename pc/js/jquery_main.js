@@ -67,3 +67,52 @@ $(window).on("scroll", function () {
         }
     }
 });
+
+const tabBox = $(".tabBox");
+const tabMenu = tabBox.find(".tabMenu > ul > li");
+const tabContents = tabBox.find(".tabContents > ul > li");
+
+tabMenu.on("click", function () {
+    $(this).addClass("on").siblings("li").removeClass("on");
+    // const siblings = $(this).siblings("li");
+    // siblings.removeClass("on");
+    tabContents.hide();
+    tabContents.eq($(this).index()).show();
+    //console.log($(this).index());
+});
+
+const lnbItem = $("#lnb .contents .item");
+lnbItem.on("mouseenter", function () {
+    const selecedtUL = $(this).find("ul");
+    selecedtUL.stop().slideDown();
+});
+lnbItem.on("mouseleave", function () {
+    const selecedtUL = $(this).find("ul");
+    selecedtUL.stop().slideUp();
+});
+
+const popup = $(".popup");
+const btnOneday = $(".oneday");
+const btnClose = $(".close");
+btnOneday.on("click", function () {
+    //popup.hide();
+    gsap.to(".popup", {
+        duration: 1,
+        top: "-100%",
+        ease: "back.in",
+        onComplete: function () {
+            popup.remove();
+        },
+    });
+});
+btnClose.on("click", function () {
+    //popup.hide();
+    gsap.to(".popup", {
+        duration: 1,
+        top: "-100%",
+        ease: "back.in",
+        onComplete: function () {
+            popup.remove();
+        },
+    });
+});

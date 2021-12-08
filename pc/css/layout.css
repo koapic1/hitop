@@ -30,11 +30,15 @@ img { vertical-align: top; }
 
 #header .container #gnb .list > li { position: relative; }
 
+#header .container #gnb .list > li > a { font-size: 1.8rem; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; position: relative; }
+
+#header .container #gnb .list > li > a::after { content: ""; display: block; height: 2px; position: absolute; bottom: 0; left: 20px; right: 20px; background-color: #fff; -webkit-transform: scaleX(0); transform: scaleX(0); -webkit-transition: 0.25s; transition: 0.25s; }
+
 #header .container #gnb .list > li:hover > a { background-color: #bf0c14; }
 
-#header .container #gnb .list > li:hover .depth02 { background-color: #bf0c14; }
+#header .container #gnb .list > li:hover > a::after { -webkit-transform: scaleX(1); transform: scaleX(1); }
 
-#header .container #gnb .list > li > a { font-size: 1.8rem; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; }
+#header .container #gnb .list > li:hover .depth02 { background-color: #bf0c14; }
 
 #header .container #gnb .list > li .depth02 { background-color: #bf0c14; padding: 20px 10px; border-radius: 0 0 15px 15px; display: none; }
 

@@ -180,4 +180,13 @@
     </div>
 </main>
 <!-- main end -->
+<aside class="popup">
+    <div class="contents">
+        <img src="../images/main/popup.png" alt="">
+    </div>
+    <div class="btns">
+        <button class="oneday">오늘 하루 안보기</button>
+        <button class="close">닫기</button>
+    </div>
+</aside>
 <?php include("../include/footer.html"); ?>

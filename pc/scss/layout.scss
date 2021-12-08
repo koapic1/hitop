@@ -71,15 +71,6 @@ img {
                 display: flex;
                 > li {
                     position: relative;
-                    &:hover {
-                        > a {
-                            background-color: $main-color;
-                        }
-                        .depth02 {
-                            background-color: $main-color;
-                            // display: block;
-                        }
-                    }
                     > a {
                         font-size: $medium-size;
                         text-transform: capitalize;
@@ -89,6 +80,31 @@ img {
                         align-items: center;
                         height: 90px;
                         padding: 0 50px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 20px;
+                            right: 20px;
+                            background-color: $white-color;
+                            transform: scaleX(0);
+                            transition: 0.25s;
+                        }
+                    }
+                    &:hover {
+                        > a {
+                            background-color: $main-color;
+                            &::after {
+                                transform: scaleX(1);
+                            }
+                        }
+                        .depth02 {
+                            background-color: $main-color;
+                            // display: block;
+                        }
                     }
                     .depth02 {
                         background-color: $main-color;
